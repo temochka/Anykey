@@ -55,7 +55,10 @@ struct Hotkey {
         guard let jsonOnlyIn = json["onlyIn"] == nil ? Optional.some([]) : json["onlyIn"] as? [String] else {
             throw ConfigError.invalid("invalid field value: onlyIn")
         }
-        key = Key(string: jsonKey)!.carbonKeyCode
+        guard let userKey = Key(string: jsonKey)?.carbonKeyCode else {
+            throw ConfigError.invalid("invalid key: \(jsonKey)")
+        }
+        key = userKey
         modifiers = NSEvent.ModifierFlags(try jsonModifiers.map(parseModifier))
         shellCommand = jsonShellCommand
         title = jsonTitle
@@ -88,11 +91,14 @@ class HotkeyConfig {
             guard let hotkeysJson = json["hotkeys"] as? [[String: Any]] else {
                 throw ConfigError.invalid("missing required top-level config field: \"hotkeys\"")
             }
-            hotkeys = hotkeysJson.map { hotkeyJson in try! Hotkey(json: hotkeyJson) }
+            hotkeys = try hotkeysJson.map { hotkeyJson in try Hotkey(json: hotkeyJson) }
         } catch CocoaError.fileNoSuchFile, CocoaError.fileReadNoSuchFile {
             throw ConfigError.access("configuration file is missing")
         } catch CocoaError.fileLocking, CocoaError.fileReadCorruptFile, CocoaError.fileReadNoPermission, CocoaError.fileReadTooLarge {
             throw ConfigError.access("couldn’t read from the configuration file")
+        } catch let error as ConfigError {
+            os_log("Error when loading the config: %s", log: OSLog.default, type: .error, error.localizedDescription)
+            throw error
         } catch {
             os_log("Unexpected error %s when loading the config", log: OSLog.default, type: .error, error.localizedDescription)
             throw ConfigError.unknown("Unknown error when reading from the configuration file. Please check the log.")
@@ -109,7 +115,6 @@ class HotkeyConfig {
         return hotkeys
             .first(where: { hotkey in
                 hotkey.key == key && hotkey.modifiers == modifiers && (hotkey.onlyIn.isEmpty || hotkey.onlyIn.contains(frontmostAppBundleId))
-
             })
     }
 }
