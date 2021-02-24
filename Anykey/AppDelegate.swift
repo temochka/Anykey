@@ -26,7 +26,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         notifications = Notifications()
         installExampleConfig()
         loadConfig()
-        setupFileWatcherAndObserver()
+        setupFileWatcher()
+        setupSettingsObserver()
         setupHotkeys()
         setupPreferences()
         setupStatusMenu()
@@ -98,17 +99,28 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if (config == nil) { config = HotkeyConfig() }
     }
     
-    private func setupFileWatcherAndObserver() {
+    private func setupFileWatcher() {
+        if fileWatcher != nil {
+            fileWatcher.stop()
+        }
+
         fileWatcher = FileWatcher([configPath()])
         fileWatcher.queue = DispatchQueue.global()
-        fileWatcher.callback = { _ in self.loadConfig() }
+        fileWatcher.callback = { event in
+            guard event.path == self.configPath() && (event.fileCreated || event.fileModified) else { return }
+            usleep(200000)
+            self.loadConfig()
+        }
         fileWatcher.start()
+    }
 
+    private func setupSettingsObserver() {
         fileObserver = UserDefaults.standard
             .publisher(for: \.configPath, options: [.new])
             .sink {
                 os_log("New config file path: %s", log: OSLog.default, type: .info, $0)
                 self.loadConfig()
+                self.setupFileWatcher()
             }
     }
 

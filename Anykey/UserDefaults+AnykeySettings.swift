@@ -12,6 +12,7 @@ let configPathDefault: String = "~/.Anykey.json"
 
 extension UserDefaults {
     @objc dynamic var configPath: String {
-        return string(forKey: configPathKey) ?? configPathDefault
+        let value = string(forKey: configPathKey) ?? configPathDefault
+        return value.isEmpty ? configPathDefault : value
     }
 }
