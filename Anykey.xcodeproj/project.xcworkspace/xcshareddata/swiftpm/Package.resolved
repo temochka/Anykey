@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "FileWatcher",
+        "repositoryURL": "https://github.com/eonist/FileWatcher",
+        "state": {
+          "branch": null,
+          "revision": "cc16ad7db4afdbedbb98c0679bab7d16322d3454",
+          "version": null
+        }
+      },
+      {
+        "package": "ShellOut",
+        "repositoryURL": "https://github.com/JohnSundell/ShellOut",
+        "state": {
+          "branch": null,
+          "revision": "e1577acf2b6e90086d01a6d5e2b8efdaae033568",
+          "version": "2.3.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
