@@ -11,7 +11,7 @@
 		C05B608725DF28F100B0CECC /* UserDefaults+AnykeySettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05B608625DF28F100B0CECC /* UserDefaults+AnykeySettings.swift */; };
 		C05B609025E5B21200B0CECC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C05B608F25E5B21200B0CECC /* README.md */; };
 		C05B609325E5B21B00B0CECC /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C05B609225E5B21B00B0CECC /* LICENSE */; };
-		C05B609B25E5C78F00B0CECC /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05B609A25E5C78F00B0CECC /* main.swift */; };
+		C05B60C625E7043B00B0CECC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C05B60C525E7043B00B0CECC /* Main.storyboard */; };
 		C0E3867125D1E60F006D9B7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E3867025D1E60F006D9B7D /* AppDelegate.swift */; };
 		C0E3867325D1E60F006D9B7D /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E3867225D1E60F006D9B7D /* PreferencesView.swift */; };
 		C0E3867525D1E611006D9B7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0E3867425D1E611006D9B7D /* Assets.xcassets */; };
@@ -28,7 +28,7 @@
 		C05B608625DF28F100B0CECC /* UserDefaults+AnykeySettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+AnykeySettings.swift"; sourceTree = "<group>"; };
 		C05B608F25E5B21200B0CECC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		C05B609225E5B21B00B0CECC /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
-		C05B609A25E5C78F00B0CECC /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		C05B60C525E7043B00B0CECC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		C0E3866D25D1E60F006D9B7D /* Anykey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Anykey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0E3867025D1E60F006D9B7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0E3867225D1E60F006D9B7D /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
@@ -86,7 +86,7 @@
 				C0E386AE25D4B17F006D9B7D /* HotkeyConfig.swift */,
 				C05B608125DDBC1200B0CECC /* Notifications.swift */,
 				C05B608625DF28F100B0CECC /* UserDefaults+AnykeySettings.swift */,
-				C05B609A25E5C78F00B0CECC /* main.swift */,
+				C05B60C525E7043B00B0CECC /* Main.storyboard */,
 			);
 			path = Anykey;
 			sourceTree = "<group>";
@@ -165,6 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0E3867825D1E611006D9B7D /* Preview Assets.xcassets in Resources */,
+				C05B60C625E7043B00B0CECC /* Main.storyboard in Resources */,
 				C05B609025E5B21200B0CECC /* README.md in Resources */,
 				C0E3867525D1E611006D9B7D /* Assets.xcassets in Resources */,
 				C05B609325E5B21B00B0CECC /* LICENSE in Resources */,
@@ -180,7 +181,6 @@
 			files = (
 				C0E386A425D33AF4006D9B7D /* Key.swift in Sources */,
 				C05B608225DDBC1200B0CECC /* Notifications.swift in Sources */,
-				C05B609B25E5C78F00B0CECC /* main.swift in Sources */,
 				C0E386AA25D468F3006D9B7D /* HotkeyListener.swift in Sources */,
 				C0E3867325D1E60F006D9B7D /* PreferencesView.swift in Sources */,
 				C05B608725DF28F100B0CECC /* UserDefaults+AnykeySettings.swift in Sources */,
@@ -324,6 +324,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.temochka.Anykey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -347,6 +348,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.temochka.Anykey;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

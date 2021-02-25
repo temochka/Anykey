@@ -40,7 +40,7 @@ struct PreferencesView: View {
                         Text("Config path:")
 
                         VStack(alignment: .leading) {
-                            TextField(configPathDefault, text: $configPath) { isEditing in
+                            TextField(configPathDefault, text: $configPath) { _ in
                             } onCommit: {
                                 UserDefaults.standard.set(self.configPath, forKey: configPathKey)
                             }

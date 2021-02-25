@@ -12,6 +12,7 @@ import OSLog
 import ShellOut
 import SwiftUI
 
+@main
 class AppDelegate: NSObject, NSApplicationDelegate {
     private var preferencesWindow: NSWindow!
     private var statusItem: NSStatusItem?
