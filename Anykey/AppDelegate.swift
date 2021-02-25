@@ -47,7 +47,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                         try shellOut(to: hotkey.shellCommand)
                     } catch {
                         let error = error as! ShellOutError
-                        os_log("Shell command error: %s", log: OSLog.default, type: .debug, error.message)
+                        os_log("Shell command error: %s", log: OSLog.default, type: .error, error.message)
                         os_log("Shell command output: %s", log: OSLog.default, type: .error, error.output)
                     }
                 }
