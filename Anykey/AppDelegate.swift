@@ -108,8 +108,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         fileWatcher = FileWatcher([configPath()])
         fileWatcher.queue = DispatchQueue.global()
         fileWatcher.callback = { event in
-            guard event.path == self.configPath() && (event.fileCreated || event.fileModified) else { return }
-            usleep(200000)
+            guard event.path == self.configPath() && (event.fileCreated || event.fileModified || event.fileRenamed) else { return }
+            usleep(200 * 1000)
             self.loadConfig()
         }
         fileWatcher.start()
