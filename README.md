@@ -10,20 +10,23 @@ A free macOS app for binding shell commands to system-wide or app-specific hotke
 
 ## Who is it for?
 
-Primarily, macOS automation enthusiasts like myself who wish to store their hotkey configuration in Git or generate it programmatically. All existing alternatives (that I’m aware of) make this impossible or very difficult:
+Primarily, macOS automation enthusiasts like myself who wish to store their hotkey configuration in Git or generate it programmatically. All existing alternatives (that I’m aware of) make this impossible or very difficult.
+Karabiner-Elements comes pretty close though (here’s an [example config](https://gist.github.com/temochka/e2a765eed2175baad6d774471fc27e3e)).
 
-| App                                | Text config | App-specific hotkeys | Free | Open Source |
-|------------------------------------|-------------|----------------------|------|-------------|
-| ⌘ Anykey                           |      ✅     |     ✅                |  ✅  |      ✅     |
-| [Automator + System preferences][] |      ❌     |     ✅                |  ✅  |      ❌     |
-| [Alfred Powerpack][]               |      ❌     |     ✅                |  ❌  |      ❌     |
-| [Keyboard Maestro][]               |      ❌     |     ✅                |  ❌  |      ❌     |
-| [Hammerspoon][]                    |      ✅     |     ❌                |  ✅  |      ✅     |
+| App                                | Text config | App-specific hotkeys | Auto-reload | Free | Open Source |
+|------------------------------------|-------------|----------------------|-------------|------|-------------|
+| ⌘ Anykey                           |      ✅     |     ✅                |     ✅      |  ✅  |      ✅      |
+| [Automator + System preferences][] |      ❌     |     ✅                |     ❌      |  ✅  |      ❌      |
+| [Alfred Powerpack][]               |      ❌     |     ✅                |     ❌      |  ❌  |      ❌      |
+| [Karabiner-Elements][]             |      ✅     |     ✅                |     ❌      |  ✅  |      ✅      |
+| [Keyboard Maestro][]               |      ❌     |     ✅                |     ❌      |  ❌  |      ❌      |
+| [Hammerspoon][]                    |      ✅     |     ❌                |     ❌      |  ✅  |      ✅      |
 
 [Automator + System preferences]: https://appleinsider.com/articles/18/03/14/how-to-create-keyboard-shortcuts-to-launch-apps-in-macos-using-automator
 [Alfred Powerpack]: https://www.alfredapp.com/workflows/
 [Keyboard Maestro]: https://www.keyboardmaestro.com/main/
 [Hammerspoon]: http://www.hammerspoon.org
+[Karabiner-Elements]: https://karabiner-elements.pqrs.org
 
 ## Installation
 
