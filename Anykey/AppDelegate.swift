@@ -21,6 +21,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private var fileWatcher: FileWatcher!
     private var fileObserver: AnyCancellable!
     private var notifications: Notifications!
+    private var selectionGrabber: SelectionGrabber!
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         requireAccessibilityAccess()
@@ -32,6 +33,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         setupHotkeys()
         setupPreferences()
         setupStatusMenu()
+        selectionGrabber = SelectionGrabber()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -42,6 +44,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         self.keyboardListener = HotkeyListener(onHotkey: { modifiers, key in
             if let hotkey = self.config.find(modifiers: modifiers, key: key) {
                 DispatchQueue.global().async {
+                    os_log("Selection: %s", log: OSLog.default, type: .debug, self.selectionGrabber.grab().string)
                     self.notifications.triggeredHotkey(hotkey: hotkey)
                     do {
                         try shellOut(to: hotkey.shellCommand)

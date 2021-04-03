@@ -12,6 +12,7 @@
 		C05B609025E5B21200B0CECC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C05B608F25E5B21200B0CECC /* README.md */; };
 		C05B609325E5B21B00B0CECC /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = C05B609225E5B21B00B0CECC /* LICENSE */; };
 		C05B60C625E7043B00B0CECC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C05B60C525E7043B00B0CECC /* Main.storyboard */; };
+		C0C5D0B625F9AA280032F400 /* SelectionGrabber.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C5D0B525F9AA280032F400 /* SelectionGrabber.swift */; };
 		C0E3867125D1E60F006D9B7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E3867025D1E60F006D9B7D /* AppDelegate.swift */; };
 		C0E3867325D1E60F006D9B7D /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E3867225D1E60F006D9B7D /* PreferencesView.swift */; };
 		C0E3867525D1E611006D9B7D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0E3867425D1E611006D9B7D /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 		C05B608F25E5B21200B0CECC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		C05B609225E5B21B00B0CECC /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
 		C05B60C525E7043B00B0CECC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		C0C5D0B525F9AA280032F400 /* SelectionGrabber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionGrabber.swift; sourceTree = "<group>"; };
 		C0E3866D25D1E60F006D9B7D /* Anykey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Anykey.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0E3867025D1E60F006D9B7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0E3867225D1E60F006D9B7D /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				C05B608125DDBC1200B0CECC /* Notifications.swift */,
 				C05B608625DF28F100B0CECC /* UserDefaults+AnykeySettings.swift */,
 				C05B60C525E7043B00B0CECC /* Main.storyboard */,
+				C0C5D0B525F9AA280032F400 /* SelectionGrabber.swift */,
 			);
 			path = Anykey;
 			sourceTree = "<group>";
@@ -183,6 +186,7 @@
 				C05B608225DDBC1200B0CECC /* Notifications.swift in Sources */,
 				C0E386AA25D468F3006D9B7D /* HotkeyListener.swift in Sources */,
 				C0E3867325D1E60F006D9B7D /* PreferencesView.swift in Sources */,
+				C0C5D0B625F9AA280032F400 /* SelectionGrabber.swift in Sources */,
 				C05B608725DF28F100B0CECC /* UserDefaults+AnykeySettings.swift in Sources */,
 				C0E3867125D1E60F006D9B7D /* AppDelegate.swift in Sources */,
 				C0E386AF25D4B17F006D9B7D /* HotkeyConfig.swift in Sources */,
