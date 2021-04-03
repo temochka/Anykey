@@ -15,58 +15,52 @@ enum ConfigError : Error {
     case unknown(String)
 }
 
-func parseModifier(mod: String) throws -> NSEvent.ModifierFlags {
-    switch mod {
-    case "option", "opt", "alt", "⌥":
-        return .option
-    case "command", "cmd", "⌘":
-        return .command
-    case "control", "ctrl", "⌃":
-        return .control
-    case "shift", "⇧":
-        return .shift
-    case "fn", "function":  
-        return .function
-    default:
-        throw ConfigError.invalid("Invalid modifier: \(mod)")
+extension NSEvent.ModifierFlags : Decodable {
+    public init(from decoder: Decoder) throws {
+        let jsonModifiers = try decoder.singleValueContainer().decode([String].self)
+
+        guard !jsonModifiers.isEmpty else {
+            throw DecodingError.typeMismatch(Self.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Found an empty array of modifiers"))
+        }
+
+        self = NSEvent.ModifierFlags(try jsonModifiers.map { mod in
+            switch mod {
+            case "option", "opt", "alt", "⌥":
+                return .option
+            case "command", "cmd", "⌘":
+                return .command
+            case "control", "ctrl", "⌃":
+                return .control
+            case "shift", "⇧":
+                return .shift
+            case "fn", "function":
+                return .function
+            default:
+                throw DecodingError.typeMismatch(Self.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Unknown modifier \(mod)"))
+            }
+        })
     }
 }
 
-struct Hotkey {
-    let key: UInt32
+extension Key : Decodable {
+    public init(from decoder: Decoder) throws {
+        let jsonKey = try decoder.singleValueContainer().decode(String.self)
+        guard let knownKey = Key(string: jsonKey) else {
+            throw DecodingError.typeMismatch(Self.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Unknown key \(jsonKey)"))
+        }
+        self = knownKey
+    }
+}
+
+struct Hotkey : Decodable {
+    let key: Key
     let modifiers: NSEvent.ModifierFlags
     let shellCommand: String
     let title: String
-    let onlyIn: [String]
-
-    init(json: [String: Any]) throws {
-        guard let jsonTitle = json["title"] as? String else {
-            throw ConfigError.invalid("invalid or missing field: title")
-        }
-        guard let jsonKey = json["key"] as? String else {
-            throw ConfigError.invalid("invalid or missing field: key")
-        }
-        guard let jsonModifiers = json["modifiers"] as? [String] else {
-            throw ConfigError.invalid("invalid or missing field: value")
-        }
-        guard let jsonShellCommand = json["shellCommand"] as? String else {
-            throw ConfigError.invalid("invalid or missing field: shellCommand")
-        }
-        guard let jsonOnlyIn = json["onlyIn"] == nil ? Optional.some([]) : json["onlyIn"] as? [String] else {
-            throw ConfigError.invalid("invalid field value: onlyIn")
-        }
-        guard let userKey = Key(string: jsonKey)?.carbonKeyCode else {
-            throw ConfigError.invalid("invalid key: \(jsonKey)")
-        }
-        key = userKey
-        modifiers = NSEvent.ModifierFlags(try jsonModifiers.map(parseModifier))
-        shellCommand = jsonShellCommand
-        title = jsonTitle
-        onlyIn = jsonOnlyIn
-    }
+    let onlyIn: [String]?
 }
 
-class HotkeyConfig {
+struct HotkeyConfig : Decodable {
     static let example: String = """
 {
     "hotkeys":
@@ -87,11 +81,8 @@ class HotkeyConfig {
         let url = URL(fileURLWithPath: filePath)
         do {
             let data = try Data(contentsOf: url)
-            let json = try JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-            guard let hotkeysJson = json["hotkeys"] as? [[String: Any]] else {
-                throw ConfigError.invalid("missing required top-level config field: \"hotkeys\"")
-            }
-            hotkeys = try hotkeysJson.map { hotkeyJson in try Hotkey(json: hotkeyJson) }
+            let decoder = JSONDecoder()
+            self = try decoder.decode(HotkeyConfig.self, from: data)
         } catch CocoaError.fileNoSuchFile, CocoaError.fileReadNoSuchFile {
             throw ConfigError.access("configuration file is missing")
         } catch CocoaError.fileLocking, CocoaError.fileReadCorruptFile, CocoaError.fileReadNoPermission, CocoaError.fileReadTooLarge {
@@ -99,6 +90,14 @@ class HotkeyConfig {
         } catch let error as ConfigError {
             os_log("Error when loading the config: %s", log: OSLog.default, type: .error, error.localizedDescription)
             throw error
+        } catch DecodingError.keyNotFound(let key, let context) {
+            os_log("Config parse error: %s", context.debugDescription)
+            throw ConfigError.invalid("Missing required key \(key.stringValue)")
+        } catch DecodingError.valueNotFound(_, let context),
+                DecodingError.typeMismatch(_, let context),
+                DecodingError.dataCorrupted(let context) {
+            os_log("Config parse error: %s", context.debugDescription)
+            throw ConfigError.invalid("Invalid value for key \(context.codingPath.last?.stringValue ?? ""). \(context.debugDescription)")
         } catch {
             os_log("Unexpected error %s when loading the config", log: OSLog.default, type: .error, error.localizedDescription)
             throw ConfigError.unknown("Unknown error when reading from the configuration file. Please check the log.")
@@ -114,7 +113,8 @@ class HotkeyConfig {
 
         return hotkeys
             .first(where: { hotkey in
-                hotkey.key == key && hotkey.modifiers == modifiers && (hotkey.onlyIn.isEmpty || hotkey.onlyIn.contains(frontmostAppBundleId))
+                hotkey.key.carbonKeyCode == key &&
+                    hotkey.modifiers == modifiers && hotkey.onlyIn.map { $0.contains(frontmostAppBundleId) } ?? true
             })
     }
 }
