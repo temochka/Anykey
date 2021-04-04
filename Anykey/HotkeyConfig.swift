@@ -67,6 +67,7 @@ struct HotkeyConfig : Decodable {
 {
     "hotkeys":
     [ { "title": "Anykey welcome"
+      , "displayNotification": true
       , "key": "a"
       , "modifiers": ["⌘", "⇧", "⌥", "⌃"]
       , "shellCommand": "say 'Thank you for using Anykey!'"
