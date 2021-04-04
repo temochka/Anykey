@@ -150,7 +150,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
     private func setupPreferences() {
-        let contentView = PreferencesView()
+        let contentView = PreferencesView(onQuit: { NSApp.terminate(self) })
         preferencesWindow = NSWindow(
             contentRect: NSRect(x: 0, y: 0, width: 480, height: 200),
             styleMask: [.titled, .closable, .fullSizeContentView],

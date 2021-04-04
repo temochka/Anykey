@@ -28,6 +28,7 @@ final class Preferences : ObservableObject {
 }
 
 struct PreferencesView: View {
+    let onQuit: () -> ()
     @ObservedObject var preferences = Preferences()
     @State private var configPathText: String = UserDefaults.standard.configPath
 
@@ -85,9 +86,13 @@ struct PreferencesView: View {
                         }
                     }
 
-                    HStack(alignment: .center) {
-                        Toggle("Hide Anykey from status bar", isOn: $preferences.hideFromStatusBar)
-                            .padding(.leading, 106)
+                    Toggle("Hide Anykey from status bar", isOn: $preferences.hideFromStatusBar)
+                        .padding(.leading, 106)
+
+                    if preferences.hideFromStatusBar {
+                        Button(action: onQuit) {
+                            Text("Quit Anykey")
+                        }.padding(.leading, 106)
                     }
                 }
             }
@@ -114,6 +119,6 @@ struct PreferencesView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        PreferencesView()
+        PreferencesView(onQuit: {})
     }
 }
