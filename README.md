@@ -8,6 +8,8 @@ A free macOS app for binding shell commands to system-wide or app-specific hotke
 
 ![Screenshot](/Screenshots/status_bar.png)
 
+For the curious: [Read the story behind Anykey](https://temochka.com/blog/posts/2021/02/26/anykey.html) on my personal blog.
+
 ## Who is it for?
 
 Primarily, macOS automation enthusiasts like myself who wish to store their hotkey configuration in Git or generate it programmatically. All existing alternatives (that I’m aware of) make this impossible or very difficult.
@@ -41,6 +43,10 @@ Karabiner-Elements comes pretty close though (here’s an [example config](https
 
 To launch Anykey on startup, add it to your login items (`System Preferences 〉Users & Groups 〉Login Items`).
 
+### Hiding the status bar icon
+
+If you would rather not have Anykey in your status bar, there’s an option to "Hide Anykey from status bar" in Settings. When Anykey is hidden, launch it again to show settings, press the “Quit” button in settings to quit.
+
 ## Configuration
 
 By default, Anykey will create a [JSON](https://en.wikipedia.org/wiki/JSON) config at `~/.Anykey.json` if it’s missing. This path can be changed in app preferences. Anykey auto-reloads its configuration whenever the specified file changes on the disk, reporting any errors via macOS notifications.
@@ -57,13 +63,20 @@ By default, Anykey will create a [JSON](https://en.wikipedia.org/wiki/JSON) conf
 }
 ```
 
-All defined hotkey objects should be placed under the top-level `"hotkeys"` array. The hotkey object supports the following attributes:
+Recognized top-level (global) settings are:
 
-* `title` (required) - a concise description of what the hotkey does. It will be shown whenever the hotkey is triggered;
+* `hotkeys` (required) - an array of hotkey definitions (see below)
+* `workingDirectory` (optional) - a string path to the directory at which to run shell commands (unless overridden per hotkey), defaults to `"/"`.
+
+The hotkey definition supports the following attributes:
+
+* `title` (required) - a concise description of what the hotkey does. It will be used in triggered notifications;
 * `key` (required) - a string describing the symbol part of the desired hotkey (e.g., `o` in <kbd>⌘+o</kbd>);
 * `modifiers` (required) — a string array of one or more modifiers (see below) that need to be held for the key to trigger the command;
 * `shellCommand` (required) - a string describing the shell command to run when the hotkey is pressed;
 * `onlyIn` (optional) - a string array of [bundle IDs](https://developer.apple.com/documentation/appstoreconnectapi/bundle_ids) of apps that this hotkey should only be triggered in.
+* `displayNotification` (optional) - a boolean flag determining whether to show a banner notification whenever this command runs, default false.
+* `workingDirectory` (optional) - a string path to the directory at which to run the specified shell command, defaults to `"/"`, takes precedence over the global setting.
 
 Here’s a handy command for getting a bundle ID value for any given app:
 
@@ -108,6 +121,8 @@ mdls -name kMDItemCFBundleIdentifier -r /Applications/Anykey.app
         ]
 }
 ```
+
+Note: For any non-trivial scripts, consider storing them in separate files (which makes them easier to edit and debug), then run via `osascript filename.scpt` (optionally, use the global `workingDirectory` option to avoid repeating long file paths).
 
 ## Acknowledgments
 
