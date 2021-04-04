@@ -59,6 +59,7 @@ struct Hotkey : Decodable {
     let shellCommand: String
     let title: String
     let onlyIn: [String]?
+    let workingDirectory: String?
 }
 
 struct HotkeyConfig : Decodable {
@@ -76,6 +77,7 @@ struct HotkeyConfig : Decodable {
 """
 
     let hotkeys: [Hotkey]
+    let workingDirectory: String?
     var isEmpty: Bool { hotkeys.isEmpty }
 
     init(filePath: String) throws {
@@ -107,6 +109,7 @@ struct HotkeyConfig : Decodable {
 
     init() {
         hotkeys = []
+        workingDirectory = nil
     }
 
     func find(modifiers: NSEvent.ModifierFlags, key: UInt32) -> Hotkey? {

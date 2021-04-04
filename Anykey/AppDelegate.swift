@@ -57,7 +57,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
                     }
 
                     do {
-                        try shellOut(to: hotkey.shellCommand)
+                        try shellOut(to: hotkey.shellCommand, at: hotkey.workingDirectory ?? self.config.workingDirectory ?? ".")
                     } catch {
                         let error = error as! ShellOutError
                         os_log("Shell command error: %s", log: OSLog.default, type: .error, error.message)
