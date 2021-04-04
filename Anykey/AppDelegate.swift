@@ -42,13 +42,17 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         self.keyboardListener = HotkeyListener(onHotkey: { modifiers, key in
             if let hotkey = self.config.find(modifiers: modifiers, key: key) {
                 DispatchQueue.global().async {
-                    self.notifications.triggeredHotkey(hotkey: hotkey)
+                    if (hotkey.displayNotification ?? false) {
+                        self.notifications.triggeredHotkey(hotkey: hotkey)
+                    }
+
                     do {
                         try shellOut(to: hotkey.shellCommand)
                     } catch {
                         let error = error as! ShellOutError
                         os_log("Shell command error: %s", log: OSLog.default, type: .error, error.message)
                         os_log("Shell command output: %s", log: OSLog.default, type: .error, error.output)
+                        self.notifications.erroredHotkey(hotkey: hotkey, exitCode: error.terminationStatus, output: error.output)
                     }
                 }
                 return true

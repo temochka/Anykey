@@ -35,6 +35,10 @@ class Notifications {
         notify(title: "Hotkey triggered", body: hotkey.title)
     }
 
+    func erroredHotkey(hotkey: Hotkey, exitCode: Int32, output: String) {
+        notify(title: "Hotkey error", body: "\(hotkey.title) exited with code \(exitCode) \(output.isEmpty ? "and no output" : "and output: \(output.prefix(80))").")
+    }
+
     private func notify(title: String, body: String) {
         guard isOptedIn else { return }
 

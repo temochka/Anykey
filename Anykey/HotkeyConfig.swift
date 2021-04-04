@@ -53,6 +53,7 @@ extension Key : Decodable {
 }
 
 struct Hotkey : Decodable {
+    let displayNotification: Bool?
     let key: Key
     let modifiers: NSEvent.ModifierFlags
     let shellCommand: String
