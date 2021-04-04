@@ -20,6 +20,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private var config: HotkeyConfig!
     private var fileWatcher: FileWatcher!
     private var fileObserver: AnyCancellable!
+    private var statusBarStatusObserver: AnyCancellable!
     private var notifications: Notifications!
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
@@ -28,14 +29,23 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         installExampleConfig()
         loadConfig()
         setupFileWatcher()
-        setupSettingsObserver()
+        setupSettingsObservers()
         setupHotkeys()
         setupPreferences()
-        setupStatusMenu()
+        if (!UserDefaults.standard.hideFromStatusBar) {
+            setupStatusMenu()
+        }
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
         fileObserver?.cancel()
+    }
+
+    func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
+        if (UserDefaults.standard.hideFromStatusBar && !flag) {
+            showPreferences()
+        }
+        return false
     }
 
     private func setupHotkeys() {
@@ -119,13 +129,23 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         fileWatcher.start()
     }
 
-    private func setupSettingsObserver() {
+    private func setupSettingsObservers() {
         fileObserver = UserDefaults.standard
             .publisher(for: \.configPath, options: [.new])
             .sink {
                 os_log("New config file path: %s", log: OSLog.default, type: .info, $0)
                 self.loadConfig()
                 self.setupFileWatcher()
+            }
+        statusBarStatusObserver = UserDefaults.standard
+            .publisher(for: \.hideFromStatusBar, options: [.new])
+            .sink { hideFromStatusBar in
+                os_log("Toggle status bar visibility: %s", log: OSLog.default, type: .info, hideFromStatusBar ? "hide" : "show")
+                if hideFromStatusBar {
+                    self.statusItem = nil
+                } else {
+                    self.setupStatusMenu()
+                }
             }
     }
 

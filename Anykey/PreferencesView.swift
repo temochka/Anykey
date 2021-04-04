@@ -6,17 +6,34 @@
 //
 
 import SwiftUI
+import Combine
 
 enum ConfigStatus : Equatable {
     case valid
     case invalid(String)
 }
 
+final class Preferences : ObservableObject {
+    @Published var hideFromStatusBar: Bool = UserDefaults.standard.hideFromStatusBar {
+        didSet {
+            UserDefaults.standard.set(hideFromStatusBar, forKey: hideFromStatusBarKey)
+        }
+    }
+
+    var configPath: String = UserDefaults.standard.configPath {
+        didSet {
+            UserDefaults.standard.set(configPath, forKey: configPathKey)
+        }
+    }
+}
+
 struct PreferencesView: View {
-    @State private var configPath: String = UserDefaults.standard.configPath
+    @ObservedObject var preferences = Preferences()
+    @State private var configPathText: String = UserDefaults.standard.configPath
+
     dynamic var configStatus: ConfigStatus {
         do {
-            _ = try HotkeyConfig(filePath: NSString(string: self.configPath).expandingTildeInPath)
+            _ = try HotkeyConfig(filePath: NSString(string: self.configPathText).expandingTildeInPath)
             return .valid
         } catch let error as ConfigError {
             switch error {
@@ -37,12 +54,12 @@ struct PreferencesView: View {
             Form {
                 Section(header: Text("Settings").bold()) {
                     HStack(alignment: .firstTextBaseline) {
-                        Text("Config path:")
+                        Text("Config path:").frame(width: 100, alignment: .leading)
 
                         VStack(alignment: .leading) {
-                            TextField(configPathDefault, text: $configPath) { _ in
+                            TextField(configPathDefault, text: $configPathText) { _ in
                             } onCommit: {
-                                UserDefaults.standard.set(self.configPath, forKey: configPathKey)
+                                self.preferences.configPath = self.configPathText
                             }
 
                             switch(self.configStatus) {
@@ -67,10 +84,17 @@ struct PreferencesView: View {
                             }
                         }
                     }
+
+                    HStack(alignment: .center) {
+                        Toggle("Hide Anykey from status bar", isOn: $preferences.hideFromStatusBar)
+                            .padding(.leading, 106)
+                    }
                 }
             }
                 .padding(20)
                 .frame(maxWidth: 800, maxHeight: .infinity)
+
+
 
             Divider()
 
@@ -82,12 +106,11 @@ struct PreferencesView: View {
                 } else {
                     Text("https://temochka.com").padding(5)
                 }
-            }
+            }.padding()
         }.padding(5)
     }
 
 }
-
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
