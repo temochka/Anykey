@@ -32,6 +32,8 @@ Karabiner-Elements comes pretty close though (here’s an [example config](https
 
 ## Installation
 
+Requires macOS 10.15 Catalina or later, optimized for macOS 11 Big Sur.
+
 * Download the [latest release](https://github.com/temochka/Anykey/releases/latest) from GitHub.
 * Unzip and copy the app to your Applications folder.
 * Launch the app (which macOS will refuse, because I’m not a “verified developer”).

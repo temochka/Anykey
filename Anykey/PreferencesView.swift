@@ -29,6 +29,7 @@ final class Preferences : ObservableObject {
 
 struct PreferencesView: View {
     let onQuit: () -> ()
+    let appVersion: String = Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String
     @ObservedObject var preferences = Preferences()
     @State private var configPathText: String = UserDefaults.standard.configPath
 
@@ -104,7 +105,7 @@ struct PreferencesView: View {
             Divider()
 
             VStack {
-                Text("Created by Artem Chistyakov, 2021")
+                Text("Anykey \(appVersion) by Artem Chistyakov, 2021")
 
                 if #available(macOS 11, *) {
                     Link("temochka.com", destination: URL(string: "https://temochka.com")!).padding(5)
