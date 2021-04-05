@@ -57,6 +57,7 @@ By default, Anykey will create a [JSON](https://en.wikipedia.org/wiki/JSON) conf
 {
     "hotkeys":
     [ { "title": "Anykey welcome"
+      , "displayNotification": true
       , "key": "a"
       , "modifiers": ["⌘", "⇧", "⌥", "⌃"]
       , "shellCommand": "say 'Thank you for using Anykey!'"
