@@ -1,0 +1,10 @@
+{
+    "hotkeys":
+    [ { "title": "Anykey welcome"
+      , "displayNotification": true
+      , "key": "fuzz"
+      , "modifiers": ["alt", "cmd"]
+      , "shellCommand": "say 'Thank you for using Anykey!'"
+      }
+    ]
+}

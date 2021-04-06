@@ -104,7 +104,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private func loadConfig() {
         do {
             os_log("Reloading hotkey config at %s", log: OSLog.default, type: .debug, self.configPath())
-            config = try HotkeyConfig(filePath: configPath())
+            config = try HotkeyConfig(url: URL(fileURLWithPath: configPath()))
         } catch let error as ConfigError {
             os_log("Error when loading the config at %s", log: OSLog.default, type: .error, self.configPath())
             notifications.configError(error: error)

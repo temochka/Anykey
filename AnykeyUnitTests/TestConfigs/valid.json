@@ -1,0 +1,1831 @@
+{
+  "workingDirectory": "/",
+  "hotkeys": [
+    {
+      "title": "Hotkey 1",
+      "shellCommand": "say \"hotkey number 1\"",
+      "key": "/",
+      "modifiers": [
+        "option"
+      ]
+    },
+    {
+      "title": "Hotkey 2",
+      "shellCommand": "say \"hotkey number 2\"",
+      "key": "/",
+      "modifiers": [
+        "opt"
+      ]
+    },
+    {
+      "title": "Hotkey 3",
+      "shellCommand": "say \"hotkey number 3\"",
+      "key": "/",
+      "modifiers": [
+        "alt"
+      ]
+    },
+    {
+      "title": "Hotkey 4",
+      "shellCommand": "say \"hotkey number 4\"",
+      "key": "/",
+      "modifiers": [
+        "⌥"
+      ]
+    },
+    {
+      "title": "Hotkey 5",
+      "shellCommand": "say \"hotkey number 5\"",
+      "key": "/",
+      "modifiers": [
+        "command"
+      ]
+    },
+    {
+      "title": "Hotkey 6",
+      "shellCommand": "say \"hotkey number 6\"",
+      "key": "/",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 7",
+      "shellCommand": "say \"hotkey number 7\"",
+      "key": "/",
+      "modifiers": [
+        "⌘"
+      ]
+    },
+    {
+      "title": "Hotkey 8",
+      "shellCommand": "say \"hotkey number 8\"",
+      "key": "/",
+      "modifiers": [
+        "control"
+      ]
+    },
+    {
+      "title": "Hotkey 9",
+      "shellCommand": "say \"hotkey number 9\"",
+      "key": "/",
+      "modifiers": [
+        "ctrl"
+      ]
+    },
+    {
+      "title": "Hotkey 10",
+      "shellCommand": "say \"hotkey number 10\"",
+      "key": "/",
+      "modifiers": [
+        "⌃"
+      ]
+    },
+    {
+      "title": "Hotkey 11",
+      "shellCommand": "say \"hotkey number 11\"",
+      "key": "/",
+      "modifiers": [
+        "shift"
+      ]
+    },
+    {
+      "title": "Hotkey 12",
+      "shellCommand": "say \"hotkey number 12\"",
+      "key": "/",
+      "modifiers": [
+        "⇧"
+      ]
+    },
+    {
+      "title": "Hotkey 13",
+      "shellCommand": "say \"hotkey number 13\"",
+      "key": "/",
+      "modifiers": [
+        "function"
+      ]
+    },
+    {
+      "title": "Hotkey 14",
+      "shellCommand": "say \"hotkey number 14\"",
+      "key": "/",
+      "modifiers": [
+        "fn"
+      ]
+    },
+    {
+      "title": "Hotkey 15",
+      "shellCommand": "say \"hotkey number 15\"",
+      "key": "/",
+      "modifiers": [
+        "option",
+        "opt",
+        "alt",
+        "⌥",
+        "command",
+        "cmd",
+        "⌘",
+        "control",
+        "ctrl",
+        "⌃",
+        "shift",
+        "⇧",
+        "function",
+        "fn"
+      ]
+    },
+    {
+      "title": "Hotkey 16",
+      "shellCommand": "say \"hotkey number 16\"",
+      "key": "a",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 17",
+      "shellCommand": "say \"hotkey number 17\"",
+      "key": "b",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 18",
+      "shellCommand": "say \"hotkey number 18\"",
+      "key": "c",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 19",
+      "shellCommand": "say \"hotkey number 19\"",
+      "key": "d",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 20",
+      "shellCommand": "say \"hotkey number 20\"",
+      "key": "e",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 21",
+      "shellCommand": "say \"hotkey number 21\"",
+      "key": "f",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 22",
+      "shellCommand": "say \"hotkey number 22\"",
+      "key": "g",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 23",
+      "shellCommand": "say \"hotkey number 23\"",
+      "key": "h",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 24",
+      "shellCommand": "say \"hotkey number 24\"",
+      "key": "i",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 25",
+      "shellCommand": "say \"hotkey number 25\"",
+      "key": "j",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 26",
+      "shellCommand": "say \"hotkey number 26\"",
+      "key": "k",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 27",
+      "shellCommand": "say \"hotkey number 27\"",
+      "key": "l",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 28",
+      "shellCommand": "say \"hotkey number 28\"",
+      "key": "m",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 29",
+      "shellCommand": "say \"hotkey number 29\"",
+      "key": "n",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 30",
+      "shellCommand": "say \"hotkey number 30\"",
+      "key": "o",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 31",
+      "shellCommand": "say \"hotkey number 31\"",
+      "key": "p",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 32",
+      "shellCommand": "say \"hotkey number 32\"",
+      "key": "q",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 33",
+      "shellCommand": "say \"hotkey number 33\"",
+      "key": "r",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 34",
+      "shellCommand": "say \"hotkey number 34\"",
+      "key": "s",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 35",
+      "shellCommand": "say \"hotkey number 35\"",
+      "key": "t",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 36",
+      "shellCommand": "say \"hotkey number 36\"",
+      "key": "u",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 37",
+      "shellCommand": "say \"hotkey number 37\"",
+      "key": "v",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 38",
+      "shellCommand": "say \"hotkey number 38\"",
+      "key": "w",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 39",
+      "shellCommand": "say \"hotkey number 39\"",
+      "key": "x",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 40",
+      "shellCommand": "say \"hotkey number 40\"",
+      "key": "y",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 41",
+      "shellCommand": "say \"hotkey number 41\"",
+      "key": "z",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 42",
+      "shellCommand": "say \"hotkey number 42\"",
+      "key": "A",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 43",
+      "shellCommand": "say \"hotkey number 43\"",
+      "key": "B",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 44",
+      "shellCommand": "say \"hotkey number 44\"",
+      "key": "C",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 45",
+      "shellCommand": "say \"hotkey number 45\"",
+      "key": "D",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 46",
+      "shellCommand": "say \"hotkey number 46\"",
+      "key": "E",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 47",
+      "shellCommand": "say \"hotkey number 47\"",
+      "key": "F",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 48",
+      "shellCommand": "say \"hotkey number 48\"",
+      "key": "G",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 49",
+      "shellCommand": "say \"hotkey number 49\"",
+      "key": "H",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 50",
+      "shellCommand": "say \"hotkey number 50\"",
+      "key": "I",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 51",
+      "shellCommand": "say \"hotkey number 51\"",
+      "key": "J",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 52",
+      "shellCommand": "say \"hotkey number 52\"",
+      "key": "K",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 53",
+      "shellCommand": "say \"hotkey number 53\"",
+      "key": "L",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 54",
+      "shellCommand": "say \"hotkey number 54\"",
+      "key": "M",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 55",
+      "shellCommand": "say \"hotkey number 55\"",
+      "key": "N",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 56",
+      "shellCommand": "say \"hotkey number 56\"",
+      "key": "O",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 57",
+      "shellCommand": "say \"hotkey number 57\"",
+      "key": "P",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 58",
+      "shellCommand": "say \"hotkey number 58\"",
+      "key": "Q",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 59",
+      "shellCommand": "say \"hotkey number 59\"",
+      "key": "R",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 60",
+      "shellCommand": "say \"hotkey number 60\"",
+      "key": "S",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 61",
+      "shellCommand": "say \"hotkey number 61\"",
+      "key": "T",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 62",
+      "shellCommand": "say \"hotkey number 62\"",
+      "key": "U",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 63",
+      "shellCommand": "say \"hotkey number 63\"",
+      "key": "V",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 64",
+      "shellCommand": "say \"hotkey number 64\"",
+      "key": "W",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 65",
+      "shellCommand": "say \"hotkey number 65\"",
+      "key": "X",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 66",
+      "shellCommand": "say \"hotkey number 66\"",
+      "key": "Y",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 67",
+      "shellCommand": "say \"hotkey number 67\"",
+      "key": "Z",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 68",
+      "shellCommand": "say \"hotkey number 68\"",
+      "key": "0",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 69",
+      "shellCommand": "say \"hotkey number 69\"",
+      "key": "1",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 70",
+      "shellCommand": "say \"hotkey number 70\"",
+      "key": "2",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 71",
+      "shellCommand": "say \"hotkey number 71\"",
+      "key": "3",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 72",
+      "shellCommand": "say \"hotkey number 72\"",
+      "key": "4",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 73",
+      "shellCommand": "say \"hotkey number 73\"",
+      "key": "5",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 74",
+      "shellCommand": "say \"hotkey number 74\"",
+      "key": "6",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 75",
+      "shellCommand": "say \"hotkey number 75\"",
+      "key": "7",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 76",
+      "shellCommand": "say \"hotkey number 76\"",
+      "key": "8",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 77",
+      "shellCommand": "say \"hotkey number 77\"",
+      "key": "9",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 78",
+      "shellCommand": "say \"hotkey number 78\"",
+      "key": "zero",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 79",
+      "shellCommand": "say \"hotkey number 79\"",
+      "key": "one",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 80",
+      "shellCommand": "say \"hotkey number 80\"",
+      "key": "two",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 81",
+      "shellCommand": "say \"hotkey number 81\"",
+      "key": "three",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 82",
+      "shellCommand": "say \"hotkey number 82\"",
+      "key": "four",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 83",
+      "shellCommand": "say \"hotkey number 83\"",
+      "key": "five",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 84",
+      "shellCommand": "say \"hotkey number 84\"",
+      "key": "six",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 85",
+      "shellCommand": "say \"hotkey number 85\"",
+      "key": "seven",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 86",
+      "shellCommand": "say \"hotkey number 86\"",
+      "key": "eight",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 87",
+      "shellCommand": "say \"hotkey number 87\"",
+      "key": "nine",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 88",
+      "shellCommand": "say \"hotkey number 88\"",
+      "key": "rightBracket",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 89",
+      "shellCommand": "say \"hotkey number 89\"",
+      "key": "]",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 90",
+      "shellCommand": "say \"hotkey number 90\"",
+      "key": "leftBracket",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 91",
+      "shellCommand": "say \"hotkey number 91\"",
+      "key": "[",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 92",
+      "shellCommand": "say \"hotkey number 92\"",
+      "key": "quote",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 93",
+      "shellCommand": "say \"hotkey number 93\"",
+      "key": "\"",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 94",
+      "shellCommand": "say \"hotkey number 94\"",
+      "key": "semicolon",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 95",
+      "shellCommand": "say \"hotkey number 95\"",
+      "key": ";",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 96",
+      "shellCommand": "say \"hotkey number 96\"",
+      "key": "backslash",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 97",
+      "shellCommand": "say \"hotkey number 97\"",
+      "key": "\\",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 98",
+      "shellCommand": "say \"hotkey number 98\"",
+      "key": "comma",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 99",
+      "shellCommand": "say \"hotkey number 99\"",
+      "key": ",",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 100",
+      "shellCommand": "say \"hotkey number 100\"",
+      "key": "slash",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 101",
+      "shellCommand": "say \"hotkey number 101\"",
+      "key": "/",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 102",
+      "shellCommand": "say \"hotkey number 102\"",
+      "key": "period",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 103",
+      "shellCommand": "say \"hotkey number 103\"",
+      "key": ".",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 104",
+      "shellCommand": "say \"hotkey number 104\"",
+      "key": "grave",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 105",
+      "shellCommand": "say \"hotkey number 105\"",
+      "key": "`",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 106",
+      "shellCommand": "say \"hotkey number 106\"",
+      "key": "ˋ",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 107",
+      "shellCommand": "say \"hotkey number 107\"",
+      "key": "｀",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 108",
+      "shellCommand": "say \"hotkey number 108\"",
+      "key": "keypaddecimal",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 109",
+      "shellCommand": "say \"hotkey number 109\"",
+      "key": "keypadmultiply",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 110",
+      "shellCommand": "say \"hotkey number 110\"",
+      "key": "keypadplus",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 111",
+      "shellCommand": "say \"hotkey number 111\"",
+      "key": "keypadclear",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 112",
+      "shellCommand": "say \"hotkey number 112\"",
+      "key": "keypaddivide",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 113",
+      "shellCommand": "say \"hotkey number 113\"",
+      "key": "keypadenter",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 114",
+      "shellCommand": "say \"hotkey number 114\"",
+      "key": "keypadminus",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 115",
+      "shellCommand": "say \"hotkey number 115\"",
+      "key": "keypadequals",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 116",
+      "shellCommand": "say \"hotkey number 116\"",
+      "key": "keypad0",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 117",
+      "shellCommand": "say \"hotkey number 117\"",
+      "key": "keypad1",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 118",
+      "shellCommand": "say \"hotkey number 118\"",
+      "key": "keypad2",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 119",
+      "shellCommand": "say \"hotkey number 119\"",
+      "key": "keypad3",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 120",
+      "shellCommand": "say \"hotkey number 120\"",
+      "key": "keypad4",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 121",
+      "shellCommand": "say \"hotkey number 121\"",
+      "key": "keypad5",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 122",
+      "shellCommand": "say \"hotkey number 122\"",
+      "key": "keypad6",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 123",
+      "shellCommand": "say \"hotkey number 123\"",
+      "key": "keypad7",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 124",
+      "shellCommand": "say \"hotkey number 124\"",
+      "key": "keypad8",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 125",
+      "shellCommand": "say \"hotkey number 125\"",
+      "key": "keypad9",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 126",
+      "shellCommand": "say \"hotkey number 126\"",
+      "key": "return",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 127",
+      "shellCommand": "say \"hotkey number 127\"",
+      "key": "\r",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 128",
+      "shellCommand": "say \"hotkey number 128\"",
+      "key": "↩︎",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 129",
+      "shellCommand": "say \"hotkey number 129\"",
+      "key": "⏎",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 130",
+      "shellCommand": "say \"hotkey number 130\"",
+      "key": "⮐",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 131",
+      "shellCommand": "say \"hotkey number 131\"",
+      "key": "tab",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 132",
+      "shellCommand": "say \"hotkey number 132\"",
+      "key": "\t",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 133",
+      "shellCommand": "say \"hotkey number 133\"",
+      "key": "⇥",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 134",
+      "shellCommand": "say \"hotkey number 134\"",
+      "key": "space",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 135",
+      "shellCommand": "say \"hotkey number 135\"",
+      "key": " ",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 136",
+      "shellCommand": "say \"hotkey number 136\"",
+      "key": "␣",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 137",
+      "shellCommand": "say \"hotkey number 137\"",
+      "key": "delete",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 138",
+      "shellCommand": "say \"hotkey number 138\"",
+      "key": "⌫",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 139",
+      "shellCommand": "say \"hotkey number 139\"",
+      "key": "escape",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 140",
+      "shellCommand": "say \"hotkey number 140\"",
+      "key": "⎋",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 141",
+      "shellCommand": "say \"hotkey number 141\"",
+      "key": "command",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 142",
+      "shellCommand": "say \"hotkey number 142\"",
+      "key": "⌘",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 143",
+      "shellCommand": "say \"hotkey number 143\"",
+      "key": "",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 144",
+      "shellCommand": "say \"hotkey number 144\"",
+      "key": "shift",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 145",
+      "shellCommand": "say \"hotkey number 145\"",
+      "key": "⇧",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 146",
+      "shellCommand": "say \"hotkey number 146\"",
+      "key": "capslock",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 147",
+      "shellCommand": "say \"hotkey number 147\"",
+      "key": "⇪",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 148",
+      "shellCommand": "say \"hotkey number 148\"",
+      "key": "option",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 149",
+      "shellCommand": "say \"hotkey number 149\"",
+      "key": "⌥",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 150",
+      "shellCommand": "say \"hotkey number 150\"",
+      "key": "control",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 151",
+      "shellCommand": "say \"hotkey number 151\"",
+      "key": "⌃",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 152",
+      "shellCommand": "say \"hotkey number 152\"",
+      "key": "rightcommand",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 153",
+      "shellCommand": "say \"hotkey number 153\"",
+      "key": "rightshift",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 154",
+      "shellCommand": "say \"hotkey number 154\"",
+      "key": "rightoption",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 155",
+      "shellCommand": "say \"hotkey number 155\"",
+      "key": "rightcontrol",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 156",
+      "shellCommand": "say \"hotkey number 156\"",
+      "key": "function",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 157",
+      "shellCommand": "say \"hotkey number 157\"",
+      "key": "fn",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 158",
+      "shellCommand": "say \"hotkey number 158\"",
+      "key": "f1",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 159",
+      "shellCommand": "say \"hotkey number 159\"",
+      "key": "F1",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 160",
+      "shellCommand": "say \"hotkey number 160\"",
+      "key": "f2",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 161",
+      "shellCommand": "say \"hotkey number 161\"",
+      "key": "F2",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 162",
+      "shellCommand": "say \"hotkey number 162\"",
+      "key": "f3",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 163",
+      "shellCommand": "say \"hotkey number 163\"",
+      "key": "F3",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 164",
+      "shellCommand": "say \"hotkey number 164\"",
+      "key": "f4",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 165",
+      "shellCommand": "say \"hotkey number 165\"",
+      "key": "F4",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 166",
+      "shellCommand": "say \"hotkey number 166\"",
+      "key": "f5",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 167",
+      "shellCommand": "say \"hotkey number 167\"",
+      "key": "F5",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 168",
+      "shellCommand": "say \"hotkey number 168\"",
+      "key": "f6",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 169",
+      "shellCommand": "say \"hotkey number 169\"",
+      "key": "F6",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 170",
+      "shellCommand": "say \"hotkey number 170\"",
+      "key": "f7",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 171",
+      "shellCommand": "say \"hotkey number 171\"",
+      "key": "F7",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 172",
+      "shellCommand": "say \"hotkey number 172\"",
+      "key": "f8",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 173",
+      "shellCommand": "say \"hotkey number 173\"",
+      "key": "F8",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 174",
+      "shellCommand": "say \"hotkey number 174\"",
+      "key": "f9",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 175",
+      "shellCommand": "say \"hotkey number 175\"",
+      "key": "F9",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 176",
+      "shellCommand": "say \"hotkey number 176\"",
+      "key": "f10",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 177",
+      "shellCommand": "say \"hotkey number 177\"",
+      "key": "F10",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 178",
+      "shellCommand": "say \"hotkey number 178\"",
+      "key": "f11",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 179",
+      "shellCommand": "say \"hotkey number 179\"",
+      "key": "F11",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 180",
+      "shellCommand": "say \"hotkey number 180\"",
+      "key": "f12",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 181",
+      "shellCommand": "say \"hotkey number 181\"",
+      "key": "F12",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 182",
+      "shellCommand": "say \"hotkey number 182\"",
+      "key": "f13",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 183",
+      "shellCommand": "say \"hotkey number 183\"",
+      "key": "F13",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 184",
+      "shellCommand": "say \"hotkey number 184\"",
+      "key": "f14",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 185",
+      "shellCommand": "say \"hotkey number 185\"",
+      "key": "F14",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 186",
+      "shellCommand": "say \"hotkey number 186\"",
+      "key": "f15",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 187",
+      "shellCommand": "say \"hotkey number 187\"",
+      "key": "F15",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 188",
+      "shellCommand": "say \"hotkey number 188\"",
+      "key": "f16",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 189",
+      "shellCommand": "say \"hotkey number 189\"",
+      "key": "F16",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 190",
+      "shellCommand": "say \"hotkey number 190\"",
+      "key": "f17",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 191",
+      "shellCommand": "say \"hotkey number 191\"",
+      "key": "F17",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 192",
+      "shellCommand": "say \"hotkey number 192\"",
+      "key": "f18",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 193",
+      "shellCommand": "say \"hotkey number 193\"",
+      "key": "F18",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 194",
+      "shellCommand": "say \"hotkey number 194\"",
+      "key": "f19",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 195",
+      "shellCommand": "say \"hotkey number 195\"",
+      "key": "F19",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 196",
+      "shellCommand": "say \"hotkey number 196\"",
+      "key": "f20",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 197",
+      "shellCommand": "say \"hotkey number 197\"",
+      "key": "F20",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 198",
+      "shellCommand": "say \"hotkey number 198\"",
+      "key": "volumeup",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 199",
+      "shellCommand": "say \"hotkey number 199\"",
+      "key": "🔊",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 200",
+      "shellCommand": "say \"hotkey number 200\"",
+      "key": "volumedown",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 201",
+      "shellCommand": "say \"hotkey number 201\"",
+      "key": "🔉",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 202",
+      "shellCommand": "say \"hotkey number 202\"",
+      "key": "mute",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 203",
+      "shellCommand": "say \"hotkey number 203\"",
+      "key": "🔇",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 204",
+      "shellCommand": "say \"hotkey number 204\"",
+      "key": "help",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 205",
+      "shellCommand": "say \"hotkey number 205\"",
+      "key": "?⃝",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 206",
+      "shellCommand": "say \"hotkey number 206\"",
+      "key": "home",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 207",
+      "shellCommand": "say \"hotkey number 207\"",
+      "key": "↖",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 208",
+      "shellCommand": "say \"hotkey number 208\"",
+      "key": "pageup",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 209",
+      "shellCommand": "say \"hotkey number 209\"",
+      "key": "⇞",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 210",
+      "shellCommand": "say \"hotkey number 210\"",
+      "key": "forwarddelete",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 211",
+      "shellCommand": "say \"hotkey number 211\"",
+      "key": "⌦",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 212",
+      "shellCommand": "say \"hotkey number 212\"",
+      "key": "end",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 213",
+      "shellCommand": "say \"hotkey number 213\"",
+      "key": "↘",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 214",
+      "shellCommand": "say \"hotkey number 214\"",
+      "key": "pagedown",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 215",
+      "shellCommand": "say \"hotkey number 215\"",
+      "key": "⇟",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 216",
+      "shellCommand": "say \"hotkey number 216\"",
+      "key": "leftarrow",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 217",
+      "shellCommand": "say \"hotkey number 217\"",
+      "key": "←",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 218",
+      "shellCommand": "say \"hotkey number 218\"",
+      "key": "rightarrow",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 219",
+      "shellCommand": "say \"hotkey number 219\"",
+      "key": "→",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 220",
+      "shellCommand": "say \"hotkey number 220\"",
+      "key": "downarrow",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 221",
+      "shellCommand": "say \"hotkey number 221\"",
+      "key": "↓",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 222",
+      "shellCommand": "say \"hotkey number 222\"",
+      "key": "uparrow",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 223",
+      "shellCommand": "say \"hotkey number 223\"",
+      "key": "↑",
+      "modifiers": [
+        "cmd"
+      ]
+    },
+    {
+      "title": "Hotkey 224",
+      "shellCommand": "say \"hotkey number 224\"",
+      "key": "/",
+      "modifiers": [
+        "cmd"
+      ],
+      "displayNotification": true
+    },
+    {
+      "title": "Hotkey 225",
+      "shellCommand": "say \"hotkey number 225\"",
+      "key": "/",
+      "modifiers": [
+        "cmd"
+      ],
+      "workingDirectory": "~/Downloads"
+    },
+    {
+      "title": "Hotkey 226",
+      "shellCommand": "say \"hotkey number 226\"",
+      "key": "/",
+      "modifiers": [
+        "cmd"
+      ],
+      "onlyIn": [
+        "com.temochka.Anykey"
+      ]
+    }
+  ]
+}

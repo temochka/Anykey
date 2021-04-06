@@ -9,7 +9,7 @@ import Cocoa
 import Foundation
 import OSLog
 
-enum ConfigError : Error {
+enum ConfigError : Error, Equatable {
     case access(String)
     case invalid(String)
     case unknown(String)
@@ -20,7 +20,7 @@ extension NSEvent.ModifierFlags : Decodable {
         let jsonModifiers = try decoder.singleValueContainer().decode([String].self)
 
         guard !jsonModifiers.isEmpty else {
-            throw DecodingError.typeMismatch(Self.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Found an empty array of modifiers"))
+            throw DecodingError.typeMismatch(Self.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Found an empty array of modifiers."))
         }
 
         self = NSEvent.ModifierFlags(try jsonModifiers.map { mod in
@@ -36,7 +36,7 @@ extension NSEvent.ModifierFlags : Decodable {
             case "fn", "function":
                 return .function
             default:
-                throw DecodingError.typeMismatch(Self.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Unknown modifier \(mod)"))
+                throw DecodingError.typeMismatch(Self.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Unknown modifier \(mod)."))
             }
         })
     }
@@ -46,7 +46,7 @@ extension Key : Decodable {
     public init(from decoder: Decoder) throws {
         let jsonKey = try decoder.singleValueContainer().decode(String.self)
         guard let knownKey = Key(string: jsonKey) else {
-            throw DecodingError.typeMismatch(Self.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Unknown key \(jsonKey)"))
+            throw DecodingError.typeMismatch(Self.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Unknown key \(jsonKey)."))
         }
         self = knownKey
     }
@@ -81,27 +81,26 @@ struct HotkeyConfig : Decodable {
     let workingDirectory: String?
     var isEmpty: Bool { hotkeys.isEmpty }
 
-    init(filePath: String) throws {
-        let url = URL(fileURLWithPath: filePath)
+    init(url: URL) throws {
         do {
             let data = try Data(contentsOf: url)
             let decoder = JSONDecoder()
             self = try decoder.decode(HotkeyConfig.self, from: data)
         } catch CocoaError.fileNoSuchFile, CocoaError.fileReadNoSuchFile {
-            throw ConfigError.access("configuration file is missing")
+            throw ConfigError.access("The specified configuration file is missing.")
         } catch CocoaError.fileLocking, CocoaError.fileReadCorruptFile, CocoaError.fileReadNoPermission, CocoaError.fileReadTooLarge {
-            throw ConfigError.access("couldn’t read from the configuration file")
+            throw ConfigError.access("Couldn’t read from the configuration file.")
         } catch let error as ConfigError {
             os_log("Error when loading the config: %s", log: OSLog.default, type: .error, error.localizedDescription)
             throw error
         } catch DecodingError.keyNotFound(let key, let context) {
             os_log("Config parse error: %s", context.debugDescription)
-            throw ConfigError.invalid("Missing required key \(key.stringValue)")
+            throw ConfigError.invalid("Missing required key \(key.stringValue).")
         } catch DecodingError.valueNotFound(_, let context),
                 DecodingError.typeMismatch(_, let context),
                 DecodingError.dataCorrupted(let context) {
             os_log("Config parse error: %s", context.debugDescription)
-            throw ConfigError.invalid("Invalid value for key \(context.codingPath.last?.stringValue ?? ""). \(context.debugDescription)")
+            throw ConfigError.invalid("Invalid value for \(context.codingPath.last?.stringValue ?? "config root"). \(context.debugDescription)")
         } catch {
             os_log("Unexpected error %s when loading the config", log: OSLog.default, type: .error, error.localizedDescription)
             throw ConfigError.unknown("Unknown error when reading from the configuration file. Please check the log.")

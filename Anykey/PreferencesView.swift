@@ -35,7 +35,7 @@ struct PreferencesView: View {
 
     dynamic var configStatus: ConfigStatus {
         do {
-            _ = try HotkeyConfig(filePath: NSString(string: self.configPathText).expandingTildeInPath)
+            _ = try HotkeyConfig(url: URL(fileURLWithPath: NSString(string: self.configPathText).expandingTildeInPath))
             return .valid
         } catch let error as ConfigError {
             switch error {

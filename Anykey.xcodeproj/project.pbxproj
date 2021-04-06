@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C0274BC1261ABDAC00D67214 /* HotkeyConfigTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0274BC0261ABDAC00D67214 /* HotkeyConfigTests.swift */; };
+		C0274BDC261C068100D67214 /* TestConfigs in Resources */ = {isa = PBXBuildFile; fileRef = C0274BDB261C068100D67214 /* TestConfigs */; };
 		C05B608225DDBC1200B0CECC /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05B608125DDBC1200B0CECC /* Notifications.swift */; };
 		C05B608725DF28F100B0CECC /* UserDefaults+AnykeySettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05B608625DF28F100B0CECC /* UserDefaults+AnykeySettings.swift */; };
 		C05B609025E5B21200B0CECC /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C05B608F25E5B21200B0CECC /* README.md */; };
@@ -23,7 +25,21 @@
 		C0E386B925D60D3D006D9B7D /* FileWatcher in Frameworks */ = {isa = PBXBuildFile; productRef = C0E386B825D60D3D006D9B7D /* FileWatcher */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C0274BB7261ABD6A00D67214 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C0E3866525D1E60F006D9B7D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C0E3866C25D1E60F006D9B7D;
+			remoteInfo = Anykey;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		C0274BB2261ABD6A00D67214 /* AnykeyUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AnykeyUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0274BB6261ABD6A00D67214 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0274BC0261ABDAC00D67214 /* HotkeyConfigTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HotkeyConfigTests.swift; sourceTree = "<group>"; };
+		C0274BDB261C068100D67214 /* TestConfigs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = TestConfigs; sourceTree = "<group>"; };
 		C05B608125DDBC1200B0CECC /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		C05B608625DF28F100B0CECC /* UserDefaults+AnykeySettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+AnykeySettings.swift"; sourceTree = "<group>"; };
 		C05B608F25E5B21200B0CECC /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
@@ -42,6 +58,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C0274BAF261ABD6A00D67214 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C0E3866A25D1E60F006D9B7D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -54,10 +77,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C0274BB3261ABD6A00D67214 /* AnykeyUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				C0274BDB261C068100D67214 /* TestConfigs */,
+				C0274BB6261ABD6A00D67214 /* Info.plist */,
+				C0274BC0261ABDAC00D67214 /* HotkeyConfigTests.swift */,
+			);
+			path = AnykeyUnitTests;
+			sourceTree = "<group>";
+		};
 		C0E3866425D1E60F006D9B7D = {
 			isa = PBXGroup;
 			children = (
 				C0E3866F25D1E60F006D9B7D /* Anykey */,
+				C0274BB3261ABD6A00D67214 /* AnykeyUnitTests */,
 				C0E3866E25D1E60F006D9B7D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -66,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				C0E3866D25D1E60F006D9B7D /* Anykey.app */,
+				C0274BB2261ABD6A00D67214 /* AnykeyUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -102,6 +137,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C0274BB1261ABD6A00D67214 /* AnykeyUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0274BBB261ABD6A00D67214 /* Build configuration list for PBXNativeTarget "AnykeyUnitTests" */;
+			buildPhases = (
+				C0274BAE261ABD6A00D67214 /* Sources */,
+				C0274BAF261ABD6A00D67214 /* Frameworks */,
+				C0274BB0261ABD6A00D67214 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C0274BB8261ABD6A00D67214 /* PBXTargetDependency */,
+			);
+			name = AnykeyUnitTests;
+			productName = AnykeyUnitTests;
+			productReference = C0274BB2261ABD6A00D67214 /* AnykeyUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		C0E3866C25D1E60F006D9B7D /* Anykey */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C0E3868025D1E611006D9B7D /* Build configuration list for PBXNativeTarget "Anykey" */;
@@ -132,6 +185,11 @@
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
+					C0274BB1261ABD6A00D67214 = {
+						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1240;
+						TestTargetID = C0E3866C25D1E60F006D9B7D;
+					};
 					C0E3866C25D1E60F006D9B7D = {
 						CreatedOnToolsVersion = 12.4;
 					};
@@ -155,11 +213,20 @@
 			projectRoot = "";
 			targets = (
 				C0E3866C25D1E60F006D9B7D /* Anykey */,
+				C0274BB1261ABD6A00D67214 /* AnykeyUnitTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C0274BB0261ABD6A00D67214 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0274BDC261C068100D67214 /* TestConfigs in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C0E3866B25D1E60F006D9B7D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -175,6 +242,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C0274BAE261ABD6A00D67214 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0274BC1261ABDAC00D67214 /* HotkeyConfigTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C0E3866925D1E60F006D9B7D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -191,7 +266,64 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		C0274BB8261ABD6A00D67214 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C0E3866C25D1E60F006D9B7D /* Anykey */;
+			targetProxy = C0274BB7261ABD6A00D67214 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		C0274BB9261ABD6A00D67214 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = AnykeyUnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				OTHER_CODE_SIGN_FLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.temochka.AnykeyUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Anykey.app/Contents/MacOS/Anykey";
+			};
+			name = Debug;
+		};
+		C0274BBA261ABD6A00D67214 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = AnykeyUnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				OTHER_CODE_SIGN_FLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.temochka.AnykeyUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Anykey.app/Contents/MacOS/Anykey";
+			};
+			name = Release;
+		};
 		C0E3867E25D1E611006D9B7D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -358,6 +490,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C0274BBB261ABD6A00D67214 /* Build configuration list for PBXNativeTarget "AnykeyUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0274BB9261ABD6A00D67214 /* Debug */,
+				C0274BBA261ABD6A00D67214 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C0E3866825D1E60F006D9B7D /* Build configuration list for PBXProject "Anykey" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
