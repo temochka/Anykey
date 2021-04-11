@@ -52,6 +52,12 @@ extension Key : Decodable {
     }
 }
 
+struct MenuHotkey : Decodable {
+    let title: String
+    let key: Key
+    let modifiers: NSEvent.ModifierFlags
+}
+
 struct Hotkey : Decodable {
     let displayNotification: Bool?
     let key: Key
@@ -77,6 +83,7 @@ struct HotkeyConfig : Decodable {
 }
 """
 
+    let menuHotkeys: Dictionary<String, [MenuHotkey]>?
     let hotkeys: [Hotkey]
     let workingDirectory: String?
     var isEmpty: Bool { hotkeys.isEmpty }
@@ -110,6 +117,7 @@ struct HotkeyConfig : Decodable {
     init() {
         hotkeys = []
         workingDirectory = nil
+        menuHotkeys = nil
     }
 
     func find(modifiers: NSEvent.ModifierFlags, key: UInt32) -> Hotkey? {
